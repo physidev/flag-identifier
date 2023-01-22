@@ -1,3 +1,4 @@
+var myBoard = new DrawingBoard.Board('drawboard', {enlargeYourContainer: true});
 let img1Element = document.getElementById('image1Src');
 let input1Element = document.getElementById('fileInput1');
 
@@ -10,7 +11,12 @@ input1Element.addEventListener('change', (e) => {
 }, false);
 
 function identify(n) {
-    let flg = cv.imread(img1Element);
+    let imgData = myBoard.getImg();
+    let img = new Image();
+    img.src = imgData;
+
+    let flg = new cv.Mat();
+    cv.resize(cv.imread(img), flg, new cv.Size(64, 32), 0, 0, cv.INTER_CUBIC);
     let flagsheet = cv.imread(document.getElementById('flagsheet'));
     cv.imshow('canvasOutput', flagsheet);
 
