@@ -3,23 +3,24 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Flag blurred distance</title>
+    <title>Flag identifier</title>
 
     <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript" src="drawingboard.min.js"></script>
     <link rel="stylesheet" href="drawingboard.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <h2>Flag identifier</h2>
     <p id="status">OpenCV.js is loading...</p>
     <div>
+        <h3>Draw your flag below</h3>
         <div id="drawboard" style="width:640px; height:320px"></div>
         <div class="inputoutput">
-            <img id="image1Src" alt="No Image" />
             <img id="flagsheet" src="./flags/flagsheet.png" style="display:none">
-            <div class="caption">flag to identify<input type="file" id="fileInput1" name="file" /></div>
         </div>
+        <h3>Is this your flag?</h3>
         <div class="inputoutput">
             <canvas id="canvasOutput" style="width:640px; height:320px"></canvas>
             <div class="caption">canvasOutput</div>
