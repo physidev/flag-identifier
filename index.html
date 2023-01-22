@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Flag blurred distance</title>
+</head>
+
+<body>
+    <h2>Blurred distance between flags</h2>
+    <p id="status">OpenCV.js is loading...</p>
+    <div>
+        <div class="inputoutput">
+            <img id="image1Src" alt="No Image" />
+            <div class="caption">compareImage <input type="file" id="fileInput1" name="file" /></div>
+        </div>
+        <div class="inputoutput">
+            <img id="image2Src" alt="No Image" />
+            <div class="caption">blurImage <input type="file" id="fileInput2" name="file" /></div>
+        </div>
+        <div class="inputoutput">
+            <canvas id="canvasOutput"></canvas>
+            <div class="caption">canvasOutput</div>
+        </div>
+
+        <div id="distance"></div>
+    </div>
+    <script type="text/javascript" src="identifier.js"></script>
+    <script async src="https://docs.opencv.org/master/opencv.js" onload="onOpenCvReady();"
+        type="text/javascript"></script>
+</body>
+
+</html>
